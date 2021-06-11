@@ -1,0 +1,59 @@
+/*Nothing here*/
+body {
+    background-color: #313131;
+    color: whitesmoke;
+}
+
+.center-box {
+    text-align: center;
+}
+
+.temperature {
+    font-size: 10vw;
+}
+
+.temp-button {
+    border: solid 2px whitesmoke;
+    background-color: #313131;
+    color: whitesmoke;
+    padding: 1.5vw 3vw 1.5vw 3vw;
+    font-size: 4vw;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s
+}
+
+.temp-button:hover {
+    border: solid 2px #313131;
+    background-color: whitesmoke;
+    color: #313131;
+}
+
+.date {
+    color: whitesmoke;
+    margin-top: 10px;
+    font-size: 1.5vw;
+}
+
+.modes-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.day-button {
+    border: solid 2px whitesmoke;
+    background-color: #313131;
+    color: whitesmoke;
+    padding: 1vw 1vw 1vw 1vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.day-button:hover {
+    border: solid 2px #313131;
+    background-color: whitesmoke;
+    color: #313131;
+}

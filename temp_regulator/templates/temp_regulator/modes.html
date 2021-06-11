@@ -1,0 +1,21 @@
+{% extends 'temp_regulator/base.html' %}
+
+{% block content %}
+
+    <div class="center-box">
+        <h1 class="display-1">Select the desired mode</h1>
+        <div class="modes-btn">
+            <button type="button" class="temp-button mt-4" onclick="add({{ temp }})">
+                <span><i class="fas fa-glass-cheers"></i> Party</span>
+            </button>
+            <button type="button" class="temp-button mt-3">
+                <span><i class="fas fa-plane-departure"></i> Vacation</span>
+            </button>
+            <button type="button" class="temp-button mt-3">
+                <span><i class="fas fa-snowflake"></i> Anti - Freeze</span>
+            </button>
+        </div>
+    </div>
+{% endblock content %}
+
+{# TODO default temperature modes #}

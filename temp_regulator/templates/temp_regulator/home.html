@@ -1,0 +1,31 @@
+{% extends 'temp_regulator/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="center-box">
+
+        <p class="date mt-5">{{ date|date:'l, H:i:s, j.n.Y' }}</p>
+        <hr>
+
+        <p class="temperature display-1">{{ temp }}<span>&#176;</span>C</p>
+
+        <div>
+            <button type="button" class="temp-button">
+                <i class="fas fa-angle-up"></i>
+            </button>
+            <button type="button" class="temp-button">
+                <i class="fas fa-angle-down"></i>
+            </button>
+        </div>
+    </div>
+    <hr class="mt-5">
+
+{% endblock content %}
+
+{% block js %}
+    <script src="{% static 'temp_regulator/js/temp_buttons.js' %}"></script>
+{% endblock js %}
+
+{# TODO dynamic time change#}
+{# TODO temperature change with buttons #}
