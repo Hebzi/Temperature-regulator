@@ -4,6 +4,10 @@ body {
     color: whitesmoke;
 }
 
+hr {
+    background-color: whitesmoke;
+}
+
 .center-box {
     text-align: center;
 }
