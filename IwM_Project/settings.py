@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'temp_regulator.apps.TempRegulatorConfig',
+    'users.apps.AppConfig',
     'rest_framework',
     'crispy_forms',
     'django.contrib.admin',
