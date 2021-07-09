@@ -1,0 +1,21 @@
+{% extends "temp_regulator/base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+            <fieldset class="form-group mt-3">
+                <legend class="border-bottom mb-4">Registration</legend>
+                {{ form | crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-light mt-3 mb-3" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">Already have an account? <a class="ml-2 text-decoration-none" href="#">Sign In</a></small>
+        </div>
+    </div>
+{% endblock content %}
