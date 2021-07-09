@@ -4,26 +4,27 @@
 
     <div class="center-box">
         <h1 class="display-1">Select the desired mode</h1>
-        <div>
-            <form class="modes-btn" method="POST">
-                {% csrf_token %}
-                <button type="button" class="temp-button mt-4" id="party-btn" name="party"
-                        onclick="set_temperature(19, '&#176;')">
-                    <span><i class="fas fa-glass-cheers"></i> Party</span>
-                </button>
 
-                <button type="button" class="temp-button mt-3" id="vacation-btn" name="vacation"
-                        onclick="return confirm('You\'re going to turn off the heating. Are you sure?')">
-                    <span><i class="fas fa-plane-departure"></i> Vacation</span>
-                </button>
+        <div class="modes-btn">
 
-                <button type="button" class="temp-button mt-3" id="anti-freeze-btn" name="anti-freeze"
-                        onclick="set_temperature(4, '&#176;')">
-                    <span><i class="fas fa-snowflake"></i> Anti - Freeze</span>
-                </button>
-            </form>
+            <a href="{% url 'temp_regulator:party-mode' %}">
+                {#                <button type="button" class="temp-button mt-4">#}
+                <i class="fas fa-glass-cheers"></i> Party
+                {#                </button>#}
+            </a>
+
+            <a href="{% url 'temp_regulator:vacation-mode' %}">
+                {#                <button type="button" class="temp-button mt-3" id="vacation-btn" name="vacation">#}
+                <span><i class="fas fa-plane-departure"></i> Vacation</span>
+                {#                </button>#}
+            </a>
+
+            <a href="{% url 'temp_regulator:conditioning-mode' %}">
+                {#            <button type="button" class="temp-button mt-3" id="anti-freeze-btn" name="anti-freeze">#}
+                <span><i class="fas fa-snowflake"></i> Conditioning</span>
+                {#            </button>#}
+            </a>
+
         </div>
     </div>
 {% endblock content %}
-
-{# TODO modes forms #}

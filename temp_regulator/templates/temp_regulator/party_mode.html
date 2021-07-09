@@ -1,0 +1,11 @@
+{% extends 'temp_regulator/base.html' %}
+
+{% block content %}
+    <div class="center-box mt-5">
+        <h2 class="display-3">The temperature was changed to <strong>20&#176;C</strong></h2>
+        <h4 class="display-4 mt-4">Have a nice party!</h4>
+        <h5 class="display-4">Do not get drunk too much :)</h5>
+
+        <a href="{% url 'temp_regulator:home' %}">Take me home</a>
+    </div>
+{% endblock content %}

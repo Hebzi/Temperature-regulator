@@ -9,17 +9,18 @@
         <hr>
         <p class="temperature display-1">{{ temperature.temp }}<span>&#176;</span>C</p>
         <div>
-            <button type="button" class="temp-button">
-                <i class="fas fa-angle-up"></i>
-            </button>
-            <button type="button" class="temp-button">
-                <i class="fas fa-angle-down"></i>
-            </button>
+            <form action="" method="POST" class="temp-buttons-form">
+                <button type="button" class="temp-button" id="up-btn">
+                    <i class="fas fa-angle-up"></i>
+                </button>
+                <button type="button" class="temp-button ml-3" id="down-btn">
+                    <i class="fas fa-angle-down"></i>
+                </button>
+            </form>
         </div>
     </div>
     <hr class="mt-5">
 
 {% endblock content %}
 
-{# TODO dynamic time change#}
 {# TODO temperature change with buttons #}
