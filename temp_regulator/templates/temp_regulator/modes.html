@@ -5,26 +5,26 @@
     <div class="center-box">
         <h1 class="display-1">Select the desired mode</h1>
 
-        <div class="modes-btn">
-
-            <a href="{% url 'temp_regulator:party-mode' %}">
-                {#                <button type="button" class="temp-button mt-4">#}
+        <a href="{% url 'temp_regulator:party-mode' %}" style="text-decoration: none"
+           onclick="return confirm('You\'re going to set temperature to 20' + '&#176;' + 'C. Are you sure?')">
+            <button class="btn btn-outline-light btn-block mt-3 modes-btn">
                 <i class="fas fa-glass-cheers"></i> Party
-                {#                </button>#}
-            </a>
+            </button>
+        </a>
 
-            <a href="{% url 'temp_regulator:vacation-mode' %}">
-                {#                <button type="button" class="temp-button mt-3" id="vacation-btn" name="vacation">#}
+        <a href="{% url 'temp_regulator:vacation-mode' %}" style="text-decoration: none"
+           onclick="return confirm('You\'re going to set temperature to 10' + '&#176;' + 'C. Are you sure?')">
+            <button class="btn btn-outline-light btn-block mt-3 modes-btn">
                 <span><i class="fas fa-plane-departure"></i> Vacation</span>
-                {#                </button>#}
-            </a>
+            </button>
+        </a>
 
-            <a href="{% url 'temp_regulator:conditioning-mode' %}">
-                {#            <button type="button" class="temp-button mt-3" id="anti-freeze-btn" name="anti-freeze">#}
+        <a href="{% url 'temp_regulator:conditioning-mode' %}" style="text-decoration: none"
+           onclick="return confirm('You\'re going to set temperature to 16' + '&#176;' + 'C. Are you sure?')">
+            <button class="btn btn-outline-light btn-block mt-3 modes-btn">
                 <span><i class="fas fa-snowflake"></i> Conditioning</span>
-                {#            </button>#}
-            </a>
-
-        </div>
+            </button>
+        </a>
     </div>
+
 {% endblock content %}
