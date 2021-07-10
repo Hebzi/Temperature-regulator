@@ -2,24 +2,32 @@
 {% load static %}
 
 {% block content %}
+    {% if user.is_authenticated %}
 
-    <div class="center-box">
+        <div class="center-box">
 
-        <p class="date mt-5">{{ date|date:'l, H:i, j.n.Y' }}</p>
-        <hr>
-        <p class="temperature display-1">{{ temperature.temp }}<span>&#176;</span>C</p>
-        <div>
-            <form action="" method="POST" class="temp-buttons-form">
-                <button type="button" class="temp-button" id="up-btn">
-                    <i class="fas fa-angle-up"></i>
-                </button>
-                <button type="button" class="temp-button ml-3" id="down-btn">
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </form>
+            <p class="date mt-5">{{ date|date:'l, H:i, j.n.Y' }}</p>
+            <hr>
+            <p class="temperature display-1">{{ temperature.temp }}<span>&#176;</span>C</p>
+            <div>
+                <form action="" method="POST" class="temp-buttons-form">
+                    <button type="button" class="temp-button" id="up-btn">
+                        <i class="fas fa-angle-up"></i>
+                    </button>
+                    <button type="button" class="temp-button ml-3" id="down-btn">
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
-    <hr class="mt-5">
+        <hr class="mt-5">
+
+    {% else %}
+        <div class="center-box">
+            <h1 class="display-3 mt-5">Welcome to the remote temperature controller.</h1>
+            <h1>Please log in to have an access :)</h1>
+        </div>
+    {% endif %}
 
 {% endblock content %}
 
