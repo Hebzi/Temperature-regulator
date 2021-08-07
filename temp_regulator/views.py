@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
+from django.db.models import F
 from .models import Temperature
 
 
@@ -55,3 +56,13 @@ def conditioning_mode(request):
     cm.save()
 
     return render(request, 'temp_regulator/conditioning_mode.html')
+
+
+def increase(request):
+    temp = Temperature.objects.update(temp=F('temp') + 0.5)
+    return redirect('/')
+
+
+def decrease(request):
+    temp = Temperature.objects.update(temp=F('temp') - 0.5)
+    return redirect('/')

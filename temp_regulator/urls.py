@@ -9,4 +9,6 @@ urlpatterns = [
     path('modes/vacation-mode/', tr_views.vacation_mode, name='vacation-mode'),
     path('modes/conditioning-mode/', tr_views.conditioning_mode, name='conditioning-mode'),
     path('heating-plan/', tr_views.heating_plan, name='heating-plan'),
+    path('increase/', tr_views.increase, name='test-home-increase'),
+    path('decrease/', tr_views.decrease, name='test-home-increase'),
 ]

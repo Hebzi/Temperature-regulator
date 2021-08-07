@@ -10,11 +10,11 @@
             <hr>
             <p class="temperature display-1">{{ temperature.temp }}<span>&#176;</span>C</p>
             <div>
-                <form action="" method="POST" class="temp-buttons-form">
-                    <button type="button" class="temp-button" id="up-btn">
+                <form method="POST" class="temp-buttons-form">
+                    <button type="button" class="temp-button" id="up-btn" onclick="window.location.href='/increase/';">
                         <i class="fas fa-angle-up"></i>
                     </button>
-                    <button type="button" class="temp-button ml-3" id="down-btn">
+                    <button type="button" class="temp-button ml-3" id="down-btn" onclick="window.location.href='/decrease/';">
                         <i class="fas fa-angle-down"></i>
                     </button>
                 </form>
@@ -30,5 +30,3 @@
     {% endif %}
 
 {% endblock content %}
-
-{# TODO temperature change with buttons #}
